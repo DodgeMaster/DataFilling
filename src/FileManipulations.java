@@ -5,8 +5,15 @@ import java.io.IOException;
 public class FileManipulations {
     private String directory;
 
+    private void createDirectory(){
+        File file = new File("data");
+        boolean bool = file.mkdirs();
+        if(!bool) System.out.println("Sorry couldnt create specified directory");
+    }
+
     public void setDirectory(String directory) {
-        this.directory = "data/" + directory + ".txt";
+        createDirectory();
+        this.directory = "C:\\Users\\kural\\IdeaProjects\\DataFilling\\data\\" + directory + ".txt";
     }
 
     public void createFile() {
@@ -24,10 +31,9 @@ public class FileManipulations {
 
     public void writeToFile(String string) throws IOException {
         try {
-            FileWriter writer = new FileWriter(directory);
+            FileWriter writer = new FileWriter(directory, true);
             writer.write(string);
             writer.close();
-            System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
