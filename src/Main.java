@@ -17,6 +17,7 @@ public class Main {
         FileManipulations file = new FileManipulations();
 
         //SET FILE NAME!!!!
+        file.createFile();
         file.setDirectory("Object_related_table_data");
 
         file.createFile();

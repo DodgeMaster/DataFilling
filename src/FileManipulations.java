@@ -5,14 +5,13 @@ import java.io.IOException;
 public class FileManipulations {
     private String directory;
 
-    private void createDirectory(){
+    public void createDirectory(){
         File file = new File("data");
         boolean bool = file.mkdirs();
         if(!bool) System.out.println("Sorry couldnt create specified directory");
     }
 
     public void setDirectory(String directory) {
-        createDirectory();
         this.directory = "C:\\Users\\kural\\IdeaProjects\\DataFilling\\data\\" + directory + ".txt";
     }
 
