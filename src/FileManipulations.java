@@ -8,7 +8,7 @@ public class FileManipulations {
     private void createDirectory(){
         File file = new File("data");
         boolean bool = file.mkdirs();
-        if(!bool) System.out.println("Sorry couldnt create specified directory");
+        if(!bool) System.out.println("Sorry couldn't create specified directory");
     }
 
     public void setDirectory(String directory) {
